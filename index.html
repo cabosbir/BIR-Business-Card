@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIR - Agent Directory</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 600px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      color: #102f74;
+      font-size: 32px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+
+    .agents-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .agent-link {
+      display: block;
+      padding: 15px;
+      background: linear-gradient(135deg, #5a8ab7 0%, #6a9ac7 100%);
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .agent-link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      color: #666;
+      font-size: 14px;
+    }
+
+    @media (max-width: 500px) {
+      .agents-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>BAJA INTERNATIONAL REALTY</h1>
+    <p class="subtitle">Select an agent to view their digital business card</p>
+    
+    <div class="agents-grid">
+      <a href="/bob" class="agent-link">Bob Van Patten</a>
+      <a href="/erika" class="agent-link">Erika Aispuro</a>
+      <a href="/alfonso" class="agent-link">Alfonso Puente</a>
+      <a href="/cozbi" class="agent-link">Cozbi Sanchez</a>
+      <a href="/hector" class="agent-link">Hector Mendoza</a>
+      <a href="/cristy" class="agent-link">Cristy Cavazos</a>
+      <a href="/marisol" class="agent-link">Marisol Tort</a>
+      <a href="/david" class="agent-link">David Scott Piper</a>
+      <a href="/zuzu" class="agent-link">Zuzu Vieira</a>
+      <a href="/edgar" class="agent-link">Edgar Pacheco</a>
+      <a href="/don" class="agent-link">Don Weis</a>
+    </div>
+
+    <div class="footer">
+      <p>35+ Years of Excellence in Cabo San Lucas</p>
+    </div>
+  </div>
+</body>
+</html>
