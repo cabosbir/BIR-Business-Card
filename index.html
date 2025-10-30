@@ -92,37 +92,26 @@
       font-family: 'Arial Black', sans-serif;
     }
 
+    /* All BIR letters in same blue - #102f74 */
     .logo-text .b {
-      color: #4a7ba7;
+      color: #102f74;
     }
 
     .logo-text .i {
-      color: #6b8ca8;
+      color: #102f74;
     }
 
     .logo-text .r {
-      color: #4a7ba7;
+      color: #102f74;
     }
 
     .front-company-name {
       font-size: 16px;
-      color: #2c3e50;
+      color: #000000;
       font-weight: 700;
       letter-spacing: 4px;
       text-transform: uppercase;
       margin-top: 5px;
-    }
-
-    .front-company-name .baja {
-      color: #2c3e50;
-    }
-
-    .front-company-name .international {
-      color: #95a5a6;
-    }
-
-    .front-company-name .realty {
-      color: #2c3e50;
     }
 
     .front-tagline {
@@ -138,7 +127,7 @@
       left: 50%;
       transform: translateX(-50%);
       font-size: 9px;
-      color: #4a7ba7;
+      color: #102f74;
       letter-spacing: 2px;
       font-weight: 700;
       text-transform: uppercase;
@@ -164,51 +153,67 @@
 
     /* BACK SIDE */
     .card-back {
-      background: linear-gradient(135deg, #4a7ba7 0%, #5a8ab7 100%);
+      background: linear-gradient(135deg, #5a8ab7 0%, #6a9ac7 100%);
       transform: rotateY(180deg);
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 30px;
+      padding: 0;
       color: white;
+    }
+
+    /* Left side - Agent photo */
+    .back-left {
+      width: 40%;
+      background: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .agent-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Right side - Contact info */
+    .back-right {
+      width: 60%;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .back-header {
       text-align: center;
-      margin-bottom: 25px;
+      margin-bottom: 15px;
     }
 
     .back-logo-small {
-      font-size: 40px;
+      font-size: 32px;
       font-weight: 900;
       letter-spacing: -2px;
       font-family: 'Arial Black', sans-serif;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    }
-
-    .back-logo-small .b {
-      color: #f5f5f5;
-    }
-
-    .back-logo-small .i {
-      color: rgba(255, 255, 255, 0.7);
-    }
-
-    .back-logo-small .r {
-      color: #f5f5f5;
+      color: #102f74;
     }
 
     .back-company {
-      font-size: 12px;
-      letter-spacing: 3px;
+      font-size: 10px;
+      letter-spacing: 2px;
       margin-top: 5px;
-      opacity: 0.9;
+      opacity: 0.95;
+      color: white;
     }
 
     .back-content {
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 10px;
+      flex-grow: 1;
     }
 
     .back-section {
@@ -219,41 +224,44 @@
 
     .back-item {
       display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 13px;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 11px;
     }
 
     .back-icon {
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
       fill: white;
       flex-shrink: 0;
-      opacity: 0.9;
+      margin-top: 2px;
+    }
+
+    .back-item-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
     }
 
     .back-label {
-      font-weight: 600;
-      min-width: 60px;
+      font-weight: 700;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .back-value {
       opacity: 0.95;
-    }
-
-    .back-divider {
-      height: 1px;
-      background: rgba(255, 255, 255, 0.3);
-      margin: 5px 0;
+      font-size: 11px;
     }
 
     .back-cta {
       text-align: center;
-      margin-top: 20px;
-      padding: 10px 20px;
+      margin-top: 10px;
+      padding: 8px 15px;
       background: rgba(255, 255, 255, 0.2);
       border-radius: 20px;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 600;
       backdrop-filter: blur(10px);
       cursor: pointer;
@@ -281,11 +289,20 @@
       }
 
       .back-logo-small {
-        font-size: 32px;
+        font-size: 28px;
       }
 
       .back-item {
-        font-size: 11px;
+        font-size: 10px;
+      }
+
+      .back-left {
+        width: 35%;
+      }
+
+      .back-right {
+        width: 65%;
+        padding: 20px;
       }
     }
 
@@ -294,7 +311,7 @@
       position: absolute;
       top: 15px;
       right: 15px;
-      background: rgba(74, 123, 167, 0.9);
+      background: rgba(16, 47, 116, 0.9);
       color: white;
       padding: 6px 12px;
       border-radius: 15px;
@@ -324,7 +341,7 @@
         </div>
         
         <div class="front-company-name">
-          <span class="baja">BAJA </span><span class="international">INTERNATIONAL </span><span class="realty">REALTY</span>
+          BAJA INTERNATIONAL REALTY
         </div>
         
         <div class="front-tagline">
@@ -341,48 +358,56 @@
 
       <!-- BACK SIDE -->
       <div class="card-face card-back">
-        <div class="back-header">
-          <div class="back-logo-small">
-            <span class="b">B</span><span class="i">I</span><span class="r">R</span>
-          </div>
-          <div class="back-company">BAJA INTERNATIONAL REALTY</div>
+        
+        <!-- LEFT: Agent Photo -->
+        <div class="back-left">
+          <!-- Replace with your agent's Cloudinary photo URL -->
+          <img src="https://res.cloudinary.com/dhwnr1pa5/image/upload/v1761604421/a-professional-portrait-photograph-of-a-_c8sIFPSGQYO0TQlApBAfFQ__16y8I8XSnO06Y6Tixti-Q_o4nhst.jpg" alt="Agent Photo" class="agent-photo">
         </div>
 
-        <div class="back-content">
-          <div class="back-section">
-            <div class="back-item">
-              <svg class="back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-              </svg>
-              <div>
-                <div class="back-label">Email:</div>
-                <div class="back-value">info@bircabo.com</div>
-              </div>
-            </div>
-
-            <div class="back-item">
-              <svg class="back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-              </svg>
-              <div>
-                <div class="back-label">Phone:</div>
-                <div class="back-value">+52 624 143 5555</div>
-              </div>
-            </div>
-
-            <div class="back-item">
-              <svg class="back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-              </svg>
-              <div>
-                <div class="back-label">Location:</div>
-                <div class="back-value">Cabo San Lucas, Mexico</div>
-              </div>
-            </div>
+        <!-- RIGHT: Contact Info -->
+        <div class="back-right">
+          <div class="back-header">
+            <div class="back-logo-small">BIR</div>
+            <div class="back-company">BAJA INTERNATIONAL REALTY</div>
           </div>
 
-          <div class="back-cta" onclick="window.location.href='https://crestline-listings-3tdur8k47-cabos-birs-projects.vercel.app/'">
-            Visit Our Website →
+          <div class="back-content">
+            <div class="back-section">
+              <div class="back-item">
+                <svg class="back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+                <div class="back-item-content">
+                  <div class="back-label">Email:</div>
+                  <div class="back-value">info@bircabo.com</div>
+                </div>
+              </div>
+
+              <div class="back-item">
+                <svg class="back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                </svg>
+                <div class="back-item-content">
+                  <div class="back-label">Phone:</div>
+                  <div class="back-value">+52 624 143 5555</div>
+                </div>
+              </div>
+
+              <div class="back-item">
+                <svg class="back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                <div class="back-item-content">
+                  <div class="back-label">Location:</div>
+                  <div class="back-value">Cabo San Lucas, Mexico</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="back-cta" onclick="window.location.href='https://crestline-listings-3tdur8k47-cabos-birs-projects.vercel.app/'">
+              Visit Our Website →
+            </div>
           </div>
         </div>
 
