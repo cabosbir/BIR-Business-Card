@@ -25,32 +25,69 @@
       background: white;
       border-radius: 20px;
       padding: 40px;
-      max-width: 600px;
+      max-width: 800px;
+      width: 100%;
       box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
     }
 
     h1 {
       color: #102f74;
       font-size: 32px;
       margin-bottom: 10px;
-      text-align: center;
+      font-weight: 900;
+      letter-spacing: -1px;
     }
 
     .subtitle {
-      text-align: center;
       color: #666;
-      margin-bottom: 30px;
       font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 30px;
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 10px;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 28px;
+      font-weight: bold;
+      color: #102f74;
+      margin-bottom: 5px;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
     .agents-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 15px;
+      margin-bottom: 20px;
     }
 
     .agent-link {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding: 15px;
       background: linear-gradient(135deg, #5a8ab7 0%, #6a9ac7 100%);
       color: white;
@@ -58,6 +95,7 @@
       border-radius: 10px;
       text-align: center;
       font-weight: 600;
+      font-size: 14px;
       transition: all 0.3s ease;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
@@ -65,17 +103,75 @@
     .agent-link:hover {
       transform: translateY(-3px);
       box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      background: linear-gradient(135deg, #6a9ac7 0%, #7aaad7 100%);
+    }
+
+    .agent-photo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 8px;
+      border: 3px solid white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .agent-name {
+      font-size: 13px;
+      line-height: 1.3;
     }
 
     .footer {
       text-align: center;
       margin-top: 30px;
+      padding-top: 20px;
+      border-top: 2px solid #e0e0e0;
       color: #666;
       font-size: 14px;
     }
 
+    .footer-logo {
+      font-size: 24px;
+      font-weight: 900;
+      color: #102f74;
+      margin-bottom: 5px;
+      letter-spacing: -1px;
+    }
+
+    @media (max-width: 768px) {
+      .agents-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 15px;
+      }
+
+      .stat-number {
+        font-size: 20px;
+      }
+
+      .stat-label {
+        font-size: 10px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .container {
+        padding: 30px 20px;
+      }
+    }
+
     @media (max-width: 500px) {
       .agents-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
         grid-template-columns: 1fr;
       }
     }
@@ -83,25 +179,100 @@
 </head>
 <body>
   <div class="container">
-    <h1>BAJA INTERNATIONAL REALTY</h1>
-    <p class="subtitle">Select an agent to view their digital business card</p>
+    <div class="header">
+      <h1>BAJA INTERNATIONAL REALTY</h1>
+      <p class="subtitle">Select an agent to view their digital business card</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat-item">
+        <div class="stat-number">75+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">1,800+</div>
+        <div class="stat-label">Properties Sold</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">$400M+</div>
+        <div class="stat-label">Sales Volume</div>
+      </div>
+    </div>
     
     <div class="agents-grid">
-      <a href="/bob" class="agent-link">Bob Van Patten</a>
-      <a href="/erika" class="agent-link">Erika Aispuro</a>
-      <a href="/alfonso" class="agent-link">Alfonso Puente</a>
-      <a href="/cozbi" class="agent-link">Cozbi Sanchez</a>
-      <a href="/hector" class="agent-link">Hector Mendoza</a>
-      <a href="/cristy" class="agent-link">Cristy Cavazos</a>
-      <a href="/marisol" class="agent-link">Marisol Tort</a>
-      <a href="/david" class="agent-link">David Scott Piper</a>
-      <a href="/zuzu" class="agent-link">Zuzu Vieira</a>
-      <a href="/edgar" class="agent-link">Edgar Pacheco</a>
-      <a href="/don" class="agent-link">Don Weis</a>
+      <!-- Bob Van Patten -->
+      <a href="/bob" class="agent-link">
+        <img src="https://res.cloudinary.com/dhwnr1pa5/image/upload/v1761524592/work-photo-2025-10-27-1761524048537_jnodyu.png" alt="Bob Van Patten" class="agent-photo">
+        <div class="agent-name">Bob Van Patten</div>
+      </a>
+
+      <!-- Erika Aispuro -->
+      <a href="/erika" class="agent-link">
+        <img src="https://res.cloudinary.com/dhwnr1pa5/image/upload/v1761528481/a-captivating-portrait-photograph-of-a-w_0i-UNv-eRnmu4VfpJsjInw_16HhuJljQfipqcXBRpW7Yw_mu9rbs.jpg" alt="Erika Aispuro" class="agent-photo">
+        <div class="agent-name">Erika Aispuro</div>
+      </a>
+
+      <!-- Alfonso Puente -->
+      <a href="/alfonso" class="agent-link">
+        <img src="https://res.cloudinary.com/dhwnr1pa5/image/upload/v1761580623/WhatsApp_Image_2025-10-27_at_8.55.37_AM_uytmga.jpg" alt="Alfonso Puente" class="agent-photo">
+        <div class="agent-name">Alfonso Puente</div>
+      </a>
+
+      <!-- Cozbi Sanchez -->
+      <a href="/cozbi" class="agent-link">
+        <img src="https://res.cloudinary.com/dhwnr1pa5/image/upload/v1761612891/WhatsApp_Image_2025-10-27_at_5.53.29_PM_dz7y0g.jpg" alt="Cozbi Sanchez" class="agent-photo">
+        <div class="agent-name">Cozbi Sanchez</div>
+      </a>
+
+      <!-- Hector Mendoza -->
+      <a href="/hector" class="agent-link">
+        <img src="https://res.cloudinary.com/dhwnr1pa5/image/upload/v1761582971/a-meticulously-crafted-portrait-photogra_mYQPdq9WQSWo-pvakiW_Yw_xsfP9GCST6CP-VnQtn3QSA_sybk55.jpg" alt="Hector Mendoza" class="agent-photo">
+        <div class="agent-name">Hector Mendoza</div>
+      </a>
+
+      <!-- Cristy Cavazos -->
+      <a href="/cristy" class="agent-link">
+        <img src="https://res.cloudinary.com/dhwnr1pa5/image/upload/v1761588682/a-soft-natural-light-portrait-photograph_2oZCo8O8TSWRNzgLxLaLew_-RP-wvPgSnKeu7bWvJ_y8A_bknfmc.jpg" alt="Cristy Cavazos" class="agent-photo">
+        <div class="agent-name">Cristy Cavazos</div>
+      </a>
+
+      <!-- Marisol Tort -->
+      <a href="/marisol" class="agent-link">
+        <img src="https://res.cloudinary.com/dhwnr1pa5/image/upload/v1761668403/WhatsApp_Image_2025-10-27_at_9.24.29_PM_uajiar.jpg" alt="Marisol Tort" class="agent-photo">
+        <div class="agent-name">Marisol Tort</div>
+      </a>
+
+      <!-- David Scott Piper -->
+      <a href="/david" class="agent-link">
+        <img src="https://res.cloudinary.com/dhwnr1pa5/image/upload/v1761614075/WhatsApp_Image_2025-10-27_at_6.09.43_PM_neaig7.jpg" alt="David Scott Piper" class="agent-photo">
+        <div class="agent-name">David Scott Piper</div>
+      </a>
+
+      <!-- Zuzu Vieira -->
+      <a href="/zuzu" class="agent-link">
+        <img src="https://res.cloudinary.com/dhwnr1pa5/image/upload/v1761788188/a-professional-studio-portrait-photograp_RGKPNo0jRji9CJIPZrgVGA_liMa2FOqRO-PViqgwfupEw_cleanup_ga5cgy.png" alt="Zuzu Vieira" class="agent-photo">
+        <div class="agent-name">Zuzu Vieira</div>
+      </a>
+
+      <!-- Edgar Pacheco -->
+      <a href="/edgar" class="agent-link">
+        <img src="https://res.cloudinary.com/dhwnr1pa5/image/upload/v1761598127/a-professional-studio-portrait-photograp_dnE69CqgQwKMvDj_boYW5A_sWO9IE8FSuKtnjTWshya2g_lvnjuh.jpg" alt="Edgar Pacheco" class="agent-photo">
+        <div class="agent-name">Edgar Pacheco</div>
+      </a>
+
+      <!-- Don Weis -->
+      <a href="/don" class="agent-link">
+        <img src="https://res.cloudinary.com/dhwnr1pa5/image/upload/v1761604421/a-professional-portrait-photograph-of-a-_c8sIFPSGQYO0TQlApBAfFQ__16y8I8XSnO06Y6Tixti-Q_o4nhst.jpg" alt="Don Weis" class="agent-photo">
+        <div class="agent-name">Don Weis</div>
+      </a>
     </div>
 
     <div class="footer">
+      <div class="footer-logo">BIR</div>
       <p>35+ Years of Excellence in Cabo San Lucas</p>
+      <p style="margin-top: 10px; font-size: 12px; color: #999;">
+        <a href="https://crestline-listings-3tdur8k47-cabos-birs-projects.vercel.app/" style="color: #102f74; text-decoration: none;">Visit Our Website →</a>
+      </p>
     </div>
   </div>
 </body>
