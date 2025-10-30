@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erika Aispuro - Baja International Realty</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bircabo.com/erika">
+  <meta property="og:title" content="Erika Aispuro - Baja International Realty">
+  <meta property="og:description" content="Contact Erika Aispuro at Baja International Realty | 📧 erika@bircabo.com | 📞 +52 624 143 5555">
+  <meta property="og:image" content="https://res.cloudinary.com/dhwnr1pa5/image/upload/v1234567/agents/erika-aispuro.jpg">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Erika Aispuro - BIR">
+  <meta name="twitter:description" content="Luxury Real Estate in Cabo San Lucas">
+  
+  <!-- Additional Meta -->
+  <meta name="description" content="Contact Erika Aispuro at Baja International Realty - Your trusted partner for luxury real estate in Cabo San Lucas">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .card-container {
+      perspective: 1000px;
+      width: 450px;
+      height: 280px;
+    }
+
+    .card {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+      cursor: pointer;
+    }
+
+    .card.flipped {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+
+    /* FRONT SIDE */
+    .card-front {
+      background: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    .front-logo {
+      margin-bottom: 15px;
+    }
+
+    .logo-text {
+      font-size: 80px;
+      font-weight: 900;
+      letter-spacing: -5px;
+      text-shadow: 
+        3px 3px 0px rgba(0, 0, 0, 0.1),
+        4px 4px 0px rgba(0, 0, 0, 0.08);
+      line-height: 0.85;
+      font-family: 'Arial Black', sans-serif;
+    }
+
+    .logo-text .b,
+    .logo-text .i,
+    .logo-text .r {
+      color: #102f74;
+    }
+
+    .front-company-name {
+      font-size: 16px;
+      color: #000000;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-top: 5px;
+    }
+
+    .front-tagline {
+      font-size: 12px;
+      color: #7f8c8d;
+      margin-top: 15px;
+      font-style: italic;
+    }
+
+    .front-footer {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 9px;
+      color: #102f74;
+      letter-spacing: 2px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .flip-hint {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 10px;
+      color: #95a5a6;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
+    }
+
+    /* BACK SIDE */
+    .card-back {
+      background: linear-gradient(135deg, #5a8ab7 0%, #6a9ac7 100%);
+      transform: rotateY(180deg);
+      display: flex;
+      padding: 0;
+      color: white;
+    }
+
+    .back-left {
+      width: 40%;
+      background: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .agent-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .back-right {
+      width: 60%;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .back-header {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .back-logo-small {
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: -2px;
+      font-family: 'Arial Black', sans-serif;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      color: #102f74;
+    }
+
+    .back-company {
+      font-size: 10px;
+      letter-spacing: 2px;
+      margin-top: 5px;
+      opacity: 0.95;
+      color: white;
+    }
+
+    .back-content {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex-grow: 1;
+    }
+
+    .back-section {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .back-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 11px;
+    }
+
+    .back-icon {
+      width: 18px;
+      height: 18px;
+      fill: white;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .back-item-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .back-label {
+      font-weight: 700;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .back-value {
+      opacity: 0.95;
+      font-size: 11px;
+    }
+
+    .back-cta {
+      text-align: center;
+      margin-top: 10px;
+      padding: 8px 15px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      backdrop-filter: blur(10px);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .back-cta:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(1.05);
+    }
+
+    .agent-name {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 5px;
+      color: white;
+      text-align: center;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 500px) {
+      .card-container {
+        width: 380px;
+        height: 240px;
+      }
+
+      .logo-text {
+        font-size: 60px;
+      }
+
+      .front-company-name {
+        font-size: 13px;
+      }
+
+      .back-logo-small {
+        font-size: 28px;
+      }
+
+      .back-item {
+        font-size: 10px;
+      }
+
+      .back-left {
+        width: 35%;
+      }
+
+      .back-right {
+        width: 65%;
+        padding: 20px;
+      }
+    }
+
+    .click-anywhere {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: rgba(16, 47, 116, 0.9);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 15px;
+      font-size: 10px;
+      font-weight: 600;
+      animation: fadeInOut 3s infinite;
+    }
+
+    @keyframes fadeInOut {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card-container">
+    <div class="card" id="businessCard">
+      
+      <!-- FRONT SIDE -->
+      <div class="card-face card-front">
+        <div class="click-anywhere">Click to flip</div>
+        
+        <div class="front-logo">
+          <div class="logo-text">
+            <span class="b">B</span><span class="i">I</span><span class="r">R</span>
+          </div>
+        </div>
+        
+        <div class="front-company-name">
+          BAJA INTERNATIONAL REALTY
+        </div>
+        
+        <div class="front-tagline">
+          Luxury Real Estate in Cabo San Lucas
+        </div>
+        
+        <div class="front-footer">35+ YEARS OF EXCELLENCE</div>
+        
+        <div class="flip-hint">
+          <span>↻</span>
+          <span>Click to see contact info</span>
+        </div>
+      </div>
+
+      <!-- BACK SIDE -->
+      <div class="card-face card-back">
+        
+        <!-- LEFT: Agent Photo -->
+        <div class="back-left">
+          <img src="https://res.cloudinary.com/dhwnr1pa5/image/upload/v1234567/agents/erika-aispuro.jpg" alt="Erika Aispuro" class="agent-photo">
+        </div>
+
+        <!-- RIGHT: Contact Info -->
+        <div class="back-right">
+          <div class="back-header">
+            <div class="agent-name">Erika Aispuro</div>
+            <div class="back-logo-small">BIR</div>
+            <div class="back-company">BAJA INTERNATIONAL REALTY</div>
+          </div>
+
+          <div class="back-content">
+            <div class="back-section">
+              <div class="back-item">
+                <svg class="back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+                <div class="back-item-content">
+                  <div class="back-label">Email:</div>
+                  <div class="back-value">erika@bircabo.com</div>
+                </div>
+              </div>
+
+              <div class="back-item">
+                <svg class="back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                </svg>
+                <div class="back-item-content">
+                  <div class="back-label">Phone:</div>
+                  <div class="back-value">+52 624 143 5555</div>
+                </div>
+              </div>
+
+              <div class="back-item">
+                <svg class="back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                <div class="back-item-content">
+                  <div class="back-label">Location:</div>
+                  <div class="back-value">Cabo San Lucas, Mexico</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="back-cta" onclick="window.location.href='https://crestline-listings-3tdur8k47-cabos-birs-projects.vercel.app/'">
+              Visit Our Website →
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const card = document.getElementById('businessCard');
+    card.addEventListener('click', function(e) {
+      if (e.target.closest('.back-cta')) {
+        return;
+      }
+      this.classList.toggle('flipped');
+    });
+  </script>
+</body>
+</html>

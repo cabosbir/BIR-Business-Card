@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title id="pageTitle">Baja International Realty</title>
+  <title>Marisol Tort - Baja International Realty</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   
   <!-- Open Graph / Social Media Meta Tags -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://bircabo.com/">
-  <meta property="og:title" id="ogTitle" content="Baja International Realty">
-  <meta property="og:description" id="ogDescription" content="Luxury Real Estate in Cabo San Lucas | 📧 info@bircabo.com | 📞 +52 624 143 5555">
-  <meta property="og:image" id="ogImage" content="https://res.cloudinary.com/dhwnr1pa5/image/upload/v1761585102/work-photo-2025-10-27-1761585093635_tsub0p.png">
+  <meta property="og:url" content="https://bircabo.com/marisol">
+  <meta property="og:title" content="Marisol Tort - Baja International Realty">
+  <meta property="og:description" content="Contact Marisol Tort at Baja International Realty | 📧 marisol@bircabo.com | 📞 +52 624 143 5555">
+  <meta property="og:image" content="https://res.cloudinary.com/dhwnr1pa5/image/upload/v1234567/agents/marisol-tort.jpg">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" id="twitterTitle" content="Baja International Realty">
+  <meta name="twitter:title" content="Marisol Tort - BIR">
   <meta name="twitter:description" content="Luxury Real Estate in Cabo San Lucas">
   
   <!-- Additional Meta -->
-  <meta name="description" id="metaDescription" content="Baja International Realty - Your trusted partner for luxury real estate in Cabo San Lucas">
+  <meta name="description" content="Contact Marisol Tort at Baja International Realty - Your trusted partner for luxury real estate in Cabo San Lucas">
   
   <style>
     * {
@@ -264,7 +264,6 @@
       transform: scale(1.05);
     }
 
-    /* Agent name on back */
     .agent-name {
       font-size: 14px;
       font-weight: 700;
@@ -360,13 +359,13 @@
         
         <!-- LEFT: Agent Photo -->
         <div class="back-left">
-          <img id="agentPhoto" src="" alt="Agent Photo" class="agent-photo">
+          <img src="https://res.cloudinary.com/dhwnr1pa5/image/upload/v1234567/agents/marisol-tort.jpg" alt="Marisol Tort" class="agent-photo">
         </div>
 
         <!-- RIGHT: Contact Info -->
         <div class="back-right">
           <div class="back-header">
-            <div class="agent-name" id="agentName"></div>
+            <div class="agent-name">Marisol Tort</div>
             <div class="back-logo-small">BIR</div>
             <div class="back-company">BAJA INTERNATIONAL REALTY</div>
           </div>
@@ -379,7 +378,7 @@
                 </svg>
                 <div class="back-item-content">
                   <div class="back-label">Email:</div>
-                  <div class="back-value" id="agentEmail"></div>
+                  <div class="back-value">marisol@bircabo.com</div>
                 </div>
               </div>
 
@@ -389,7 +388,7 @@
                 </svg>
                 <div class="back-item-content">
                   <div class="back-label">Phone:</div>
-                  <div class="back-value" id="agentPhone"></div>
+                  <div class="back-value">+52 624 143 5555</div>
                 </div>
               </div>
 
@@ -416,117 +415,6 @@
   </div>
 
   <script>
-    // AGENT DATABASE - Add all your agents here
-    const agents = {
-      'bob': {
-        name: 'Bob Van Patten',
-        email: 'bob@bircabo.com',
-        phone: '+52 624 143 5555',
-        photo: 'https://res.cloudinary.com/dhwnr1pa5/image/upload/v1234567/agents/bob-van-patten.jpg'
-      },
-      'erika': {
-        name: 'Erika Aispuro',
-        email: 'erika@bircabo.com',
-        phone: '+52 624 143 5555',
-        photo: 'https://res.cloudinary.com/dhwnr1pa5/image/upload/v1234567/agents/erika-aispuro.jpg'
-      },
-      'alfonso': {
-        name: 'Alfonso Puente',
-        email: 'alfonso@bircabo.com',
-        phone: '+52 624 143 5555',
-        photo: 'https://res.cloudinary.com/dhwnr1pa5/image/upload/v1234567/agents/alfonso-puente.jpg'
-      },
-      'cozbi': {
-        name: 'Cozbi Sanchez',
-        email: 'cozbi@bircabo.com',
-        phone: '+52 624 143 5555',
-        photo: 'https://res.cloudinary.com/dhwnr1pa5/image/upload/v1234567/agents/cozbi-sanchez.jpg'
-      },
-      'hector': {
-        name: 'Hector Mendoza',
-        email: 'hector@bircabo.com',
-        phone: '+52 624 143 5555',
-        photo: 'https://res.cloudinary.com/dhwnr1pa5/image/upload/v1234567/agents/hector-mendoza.jpg'
-      },
-      'cristy': {
-        name: 'Cristy Cavazos',
-        email: 'cristy@bircabo.com',
-        phone: '+52 624 143 5555',
-        photo: 'https://res.cloudinary.com/dhwnr1pa5/image/upload/v1234567/agents/cristy-cavazos.jpg'
-      },
-      'marisol': {
-        name: 'Marisol Tort',
-        email: 'marisol@bircabo.com',
-        phone: '+52 624 143 5555',
-        photo: 'https://res.cloudinary.com/dhwnr1pa5/image/upload/v1234567/agents/marisol-tort.jpg'
-      },
-      'david': {
-        name: 'David Scott Piper',
-        email: 'david@bircabo.com',
-        phone: '+52 624 143 5555',
-        photo: 'https://res.cloudinary.com/dhwnr1pa5/image/upload/v1234567/agents/david-scott-piper.jpg'
-      },
-      'zuzu': {
-        name: 'Zuzu Vieira',
-        email: 'zuzu@bircabo.com',
-        phone: '+52 624 143 5555',
-        photo: 'https://res.cloudinary.com/dhwnr1pa5/image/upload/v1234567/agents/zuzu-vieira.jpg'
-      },
-      'edgar': {
-        name: 'Edgar Pacheco',
-        email: 'edgar@bircabo.com',
-        phone: '+52 624 143 5555',
-        photo: 'https://res.cloudinary.com/dhwnr1pa5/image/upload/v1761604421/a-professional-portrait-photograph-of-a-_c8sIFPSGQYO0TQlApBAfFQ__16y8I8XSnO06Y6Tixti-Q_o4nhst.jpg'
-      },
-      'don': {
-        name: 'Don Weis',
-        email: 'don@bircabo.com',
-        phone: '+52 624 143 5555',
-        photo: 'https://res.cloudinary.com/dhwnr1pa5/image/upload/v1234567/agents/don-weis.jpg'
-      }
-    };
-
-    // Get agent from URL parameter
-    function getAgentFromURL() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const agentParam = urlParams.get('agent');
-      
-      // Also check if URL is like bircabo.com/edgar
-      const pathAgent = window.location.pathname.split('/')[1];
-      
-      return (agentParam || pathAgent || '').toLowerCase();
-    }
-
-    // Load agent data
-    function loadAgent() {
-      const agentSlug = getAgentFromURL();
-      const agent = agents[agentSlug];
-
-      if (agent) {
-        // Update page content
-        document.getElementById('agentName').textContent = agent.name;
-        document.getElementById('agentEmail').textContent = agent.email;
-        document.getElementById('agentPhone').textContent = agent.phone;
-        document.getElementById('agentPhoto').src = agent.photo;
-        document.getElementById('agentPhoto').alt = agent.name;
-
-        // Update meta tags
-        document.getElementById('pageTitle').textContent = `${agent.name} - Baja International Realty`;
-        document.getElementById('ogTitle').setAttribute('content', `${agent.name} - BIR`);
-        document.getElementById('twitterTitle').setAttribute('content', `${agent.name} - BIR`);
-        document.getElementById('metaDescription').setAttribute('content', `Contact ${agent.name} at Baja International Realty - ${agent.email} | ${agent.phone}`);
-        document.getElementById('ogDescription').setAttribute('content', `Contact ${agent.name} at Baja International Realty - ${agent.email} | ${agent.phone}`);
-        document.getElementById('ogImage').setAttribute('content', agent.photo);
-      } else {
-        // Default to general info
-        document.getElementById('agentName').textContent = 'Our Team';
-        document.getElementById('agentEmail').textContent = 'info@bircabo.com';
-        document.getElementById('agentPhone').textContent = '+52 624 143 5555';
-        document.getElementById('agentPhoto').src = 'https://res.cloudinary.com/dhwnr1pa5/image/upload/v1761585102/work-photo-2025-10-27-1761585093635_tsub0p.png';
-      }
-    }
-
-    // Flip card functionality
     const card = document.getElementById('businessCard');
     card.addEventListener('click', function(e) {
       if (e.target.closest('.back-cta')) {
@@ -534,9 +422,6 @@
       }
       this.classList.toggle('flipped');
     });
-
-    // Load agent on page load
-    loadAgent();
   </script>
 </body>
 </html>
