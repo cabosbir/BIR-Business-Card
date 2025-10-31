@@ -90,11 +90,6 @@
         4px 4px 0px rgba(0, 0, 0, 0.08);
       line-height: 0.85;
       font-family: 'Arial Black', sans-serif;
-    }
-
-    .logo-text .b,
-    .logo-text .i,
-    .logo-text .r {
       color: #102f74;
     }
 
@@ -247,6 +242,15 @@
     .back-value {
       opacity: 0.95;
       font-size: 11px;
+      word-break: break-word;
+    }
+
+    .back-value.phone {
+      font-size: 10px;
+    }
+
+    .back-value.email {
+      font-size: 9px;
     }
 
     .back-cta {
@@ -336,9 +340,7 @@
         <div class="click-anywhere">Click to flip</div>
         
         <div class="front-logo">
-          <div class="logo-text">
-            <span class="b">B</span><span class="i">I</span><span class="r">R</span>
-          </div>
+          <div class="logo-text">BIR</div>
         </div>
         
         <div class="front-company-name">
@@ -385,7 +387,7 @@
                 </svg>
                 <div class="back-item-content">
                   <div class="back-label">Email:</div>
-                  <div class="back-value">Cozbi@bajainternationalrealty.com</div>
+                  <div class="back-value email">Cozbi@bajainternationalrealty.com</div>
                 </div>
               </div>
 
@@ -395,7 +397,7 @@
                 </svg>
                 <div class="back-item-content">
                   <div class="back-label">Phone:</div>
-                  <div class="back-value">+52 624 118 9512</div>
+                  <div class="back-value phone">+52 624 118 9512</div>
                 </div>
               </div>
 
@@ -410,7 +412,7 @@
               </div>
             </div>
 
-            <div class="back-cta" onclick="window.location.href='https://bircabo.com/agents/cozbi'">
+            <div class="back-cta" onclick="window.location.href='https://crestline-listings.vercel.app/agents/cozbi'">
               View My Properties →
             </div>
           </div>
