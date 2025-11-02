@@ -81,6 +81,12 @@
       margin-bottom: 15px;
     }
 
+    .front-logo img {
+      max-width: 280px;
+      height: auto;
+      display: block;
+    }
+
     .logo-text {
       font-size: 80px;
       font-weight: 900;
@@ -170,7 +176,7 @@
 
     .back-right {
       width: 60%;
-      padding: 18px 25px 20px 25px;
+      padding: 8px 16px 12px 16px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -178,49 +184,54 @@
 
     .back-header {
       text-align: center;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .back-logo-small {
-      font-size: 32px;
-      font-weight: 900;
-      letter-spacing: -2px;
-      font-family: 'Arial Black', sans-serif;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-      color: #102f74;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 5px;
+    }
+
+    .back-logo-small img {
+      max-width: 200px;
+      height: auto;
+      display: block;
     }
 
     .back-company {
-      font-size: 10px;
-      letter-spacing: 2px;
-      margin-top: 5px;
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      margin-top: 2px;
       opacity: 0.95;
       color: white;
+      text-transform: uppercase;
+      font-weight: 700;
     }
 
     .back-content {
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 4px;
       flex-grow: 1;
     }
 
     .back-section {
       display: flex;
       flex-direction: column;
-      gap: 5px;
+      gap: 3px;
     }
 
     .back-item {
       display: flex;
       align-items: flex-start;
-      gap: 10px;
-      font-size: 11px;
+      gap: 8px;
+      font-size: 10px;
     }
 
     .back-icon {
-      width: 18px;
-      height: 18px;
+      width: 15px;
+      height: 15px;
       fill: white;
       flex-shrink: 0;
       margin-top: 2px;
@@ -234,31 +245,32 @@
 
     .back-label {
       font-weight: 700;
-      font-size: 10px;
+      font-size: 9px;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
 
     .back-value {
       opacity: 0.95;
-      font-size: 11px;
+      font-size: 10px;
       word-break: break-word;
     }
 
     .back-value.phone {
-      font-size: 10px;
+      font-size: 9px;
     }
 
     .back-value.email {
-      font-size: 10px;
+      font-size: 9px;
     }
 
     .back-cta {
       text-align: center;
-      margin-top: 4px;
-      padding: 8px 15px;
+      margin-top: 6px;
+      padding: 8px 12px;
       background: rgba(255, 255, 255, 0.2);
       border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
       font-size: 11px;
       font-weight: 600;
       backdrop-filter: blur(10px);
@@ -272,11 +284,15 @@
     }
 
     .agent-name {
-      font-size: 14px;
+      font-size: 11px;
       font-weight: 700;
-      margin-bottom: 5px;
+      margin-bottom: 1px;
       color: white;
-      text-align: center;
+    }
+
+    .agent-link-text {
+      font-size: 9px;
+      opacity: 0.9;
     }
 
     /* Mobile responsive */
@@ -284,6 +300,10 @@
       .card-container {
         width: 380px;
         height: 240px;
+      }
+
+      .front-logo img {
+        max-width: 220px;
       }
 
       .logo-text {
@@ -294,12 +314,30 @@
         font-size: 13px;
       }
 
-      .back-logo-small {
-        font-size: 28px;
+      .back-logo-small img {
+        max-width: 170px;
       }
 
       .back-item {
-        font-size: 10px;
+        font-size: 9px;
+      }
+
+      .back-label {
+        font-size: 8px;
+      }
+
+      .back-value {
+        font-size: 9px;
+      }
+
+      .back-value.phone,
+      .back-value.email {
+        font-size: 8px;
+      }
+
+      .back-icon {
+        width: 13px;
+        height: 13px;
       }
 
       .back-left {
@@ -308,7 +346,12 @@
 
       .back-right {
         width: 65%;
-        padding: 15px 20px 18px 20px;
+        padding: 8px 14px 10px 14px;
+      }
+
+      .back-cta {
+        padding: 6px 10px;
+        margin-top: 4px;
       }
     }
 
@@ -340,7 +383,7 @@
         <div class="click-anywhere">Click to flip</div>
         
         <div class="front-logo">
-          <div class="logo-text">BIR</div>
+          <img src="https://res.cloudinary.com/dhwnr1pa5/image/upload/v1762021536/Screenshot_2025-10-31_at_5.21.25_PM-removebg-preview_2_gndt9y.png" alt="BIR Logo">
         </div>
         
         <div class="front-company-name">
@@ -374,8 +417,10 @@
         <!-- RIGHT: Contact Info -->
         <div class="back-right">
           <div class="back-header">
-            <div class="back-logo-small">BIR</div>
-            <div class="back-company">BAJA INTERNATIONAL REALTY</div>
+            <div class="back-logo-small">
+              <img src="https://res.cloudinary.com/dhwnr1pa5/image/upload/v1762021536/Screenshot_2025-10-31_at_5.21.25_PM-removebg-preview_2_gndt9y.png" alt="BIR Logo">
+            </div>
+            <div class="back-company">Baja International Realty</div>
           </div>
 
           <div class="back-content">
@@ -412,8 +457,8 @@
             </div>
 
             <div class="back-cta" onclick="window.location.href=(window.location.hostname.includes('vercel.app') ? 'https://crestline-listings.vercel.app/agents/bob' : 'https://bircabo.com/agents/bob')">
-              <div style="font-weight: 700; margin-bottom: 1px;">Bob Van Patten</div>
-              <div style="font-size: 10px; opacity: 0.9;">View My Properties →</div>
+              <div class="agent-name">Bob Van Patten</div>
+              <div class="agent-link-text">View My Properties →</div>
             </div>
           </div>
         </div>
